@@ -1,0 +1,16 @@
+services:
+  node:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: node_container
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
