@@ -6,6 +6,8 @@ COPY . .
 
 RUN npm install
 
-CMD [ "node", "index.js" ]
+RUN npm install -g nodemon
+
+CMD [ "nodemon", "index.js" ]
 
 EXPOSE 3000
